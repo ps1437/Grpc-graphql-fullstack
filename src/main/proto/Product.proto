@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.syshco.grpc.gen";
+
+import "google/protobuf/timestamp.proto"; // Import the timestamp.proto file
+
+import "google/protobuf/empty.proto"; // Import the timestamp.proto file
+
+message Product {
+  int32 productId = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string brand = 5;
+  string category = 6;
+  string imageUrl = 7;
+  int32 stockQuantity = 8;
+  bool isAvailable = 9;
+  google.protobuf.Timestamp createdAt = 10;
+  google.protobuf.Timestamp updatedAt = 11;
+}
+
+message ProductList {
+  repeated Product products = 1;
+}
+
+
+message ProductId {
+  int32 productId = 1;
+}
+
+service ProductService {
+  rpc getAllProducts(google.protobuf.Empty) returns (ProductList);
+  rpc addProducts(ProductList) returns (google.protobuf.Empty);
+  rpc getByProductId(ProductId) returns (Product);
+}
+
