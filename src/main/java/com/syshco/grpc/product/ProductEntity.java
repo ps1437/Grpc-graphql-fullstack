@@ -8,7 +8,7 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-@Entity
+@Entity(name = "Products")
 @Table(name = "Products")
 public class ProductEntity {
     @Id

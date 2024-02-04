@@ -1,4 +1,4 @@
-package com.syshco.grpc.product;
+package com.syshco.grpc.product.grpc;
 
 
 import com.google.protobuf.Empty;
@@ -6,6 +6,9 @@ import com.syshco.grpc.gen.Product;
 import com.syshco.grpc.gen.ProductId;
 import com.syshco.grpc.gen.ProductList;
 import com.syshco.grpc.gen.ProductServiceGrpc;
+import com.syshco.grpc.product.ProductEntity;
+import com.syshco.grpc.product.ProductMapper;
+import com.syshco.grpc.product.ProductRepository;
 import com.syshco.grpc.starter.GrpcService;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
