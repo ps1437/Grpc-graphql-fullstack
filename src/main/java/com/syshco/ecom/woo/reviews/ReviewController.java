@@ -1,4 +1,4 @@
-package com.syshco.grpc.reviews;
+package com.syshco.ecom.woo.reviews;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
-package com.syshco.grpc.product;
+package com.syshco.ecom.woo.product;
 
-import com.syshco.grpc.gen.ProductList;
-import com.syshco.grpc.gen.ProductServiceGrpc;
+import com.syshco.ecom.woo.gen.ProductList;
+import com.syshco.ecom.woo.gen.ProductServiceGrpc;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

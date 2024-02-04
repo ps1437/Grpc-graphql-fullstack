@@ -1,15 +1,15 @@
-package com.syshco.grpc.product.grpc;
+package com.syshco.ecom.woo.product.grpc;
 
 
 import com.google.protobuf.Empty;
-import com.syshco.grpc.gen.Product;
-import com.syshco.grpc.gen.ProductId;
-import com.syshco.grpc.gen.ProductList;
-import com.syshco.grpc.gen.ProductServiceGrpc;
-import com.syshco.grpc.product.ProductEntity;
-import com.syshco.grpc.product.ProductMapper;
-import com.syshco.grpc.product.ProductRepository;
-import com.syshco.grpc.starter.GrpcService;
+import com.syshco.ecom.woo.gen.ProductId;
+import com.syshco.ecom.woo.gen.ProductList;
+import com.syshco.ecom.woo.gen.ProductServiceGrpc;
+import com.syshco.ecom.woo.product.ProductMapper;
+import com.syshco.ecom.woo.product.ProductRepository;
+import com.syshco.ecom.woo.starter.GrpcService;
+import com.syshco.ecom.woo.gen.Product;
+import com.syshco.ecom.woo.product.ProductEntity;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 

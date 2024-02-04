@@ -1,4 +1,4 @@
-package com.syshco.grpc.product;
+package com.syshco.ecom.woo.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

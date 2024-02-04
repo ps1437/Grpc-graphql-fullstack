@@ -1,4 +1,4 @@
-package com.syshco.grpc.users;
+package com.syshco.ecom.woo.users;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.syshco.grpc.starter;
+package com.syshco.ecom.woo.starter;
 
 import io.grpc.BindableService;
 import io.grpc.Server;

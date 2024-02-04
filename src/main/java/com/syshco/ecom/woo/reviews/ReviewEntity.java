@@ -1,8 +1,7 @@
-package com.syshco.grpc.reviews;
+package com.syshco.ecom.woo.reviews;
 
-import com.syshco.grpc.gen.Product;
-import com.syshco.grpc.product.ProductEntity;
-import com.syshco.grpc.users.UserEntity;
+import com.syshco.ecom.woo.users.UserEntity;
+import com.syshco.ecom.woo.product.ProductEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 

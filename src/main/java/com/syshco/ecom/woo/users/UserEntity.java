@@ -1,4 +1,4 @@
-package com.syshco.grpc.users;
+package com.syshco.ecom.woo.users;
 
 import jakarta.persistence.*;
 import lombok.Data;

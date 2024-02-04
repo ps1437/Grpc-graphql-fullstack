@@ -1,11 +1,11 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.syshco.grpc.gen";
+option java_package = "com.syshco.ecom.woo.gen";
 
 import "google/protobuf/timestamp.proto"; // Import the timestamp.proto file
 
-import "google/protobuf/empty.proto"; // Import the timestamp.proto file
+import "google/protobuf/empty.proto"; // Import the empty.proto file
 
 message Product {
   int32 productId = 1;
