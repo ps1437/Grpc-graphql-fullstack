@@ -29,10 +29,14 @@ repositories {
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('io.grpc:grpc-stub:' + grpcVersion)
-	implementation("io.grpc:grpc-core:${grpcVersion}")
-	implementation('io.grpc:grpc-protobuf:' + grpcVersion)
-	implementation("io.grpc:grpc-netty:${grpcVersion}")
+//	implementation('io.grpc:grpc-stub:' + grpcVersion)
+//	implementation("io.grpc:grpc-core:${grpcVersion}")
+//	implementation('io.grpc:grpc-protobuf:' + grpcVersion)
+//	implementation("io.grpc:grpc-netty:${grpcVersion}")
+	implementation 'net.devh:grpc-server-spring-boot-starter:2.15.0.RELEASE'
+
+	implementation 'net.devh:grpc-client-spring-boot-starter:2.15.0.RELEASE'
+
 
 	compileOnly('org.projectlombok:lombok')
 	implementation 'org.projectlombok:lombok'

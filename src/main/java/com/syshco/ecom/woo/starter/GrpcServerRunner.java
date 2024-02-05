@@ -1,3 +1,4 @@
+/*
 package com.syshco.ecom.woo.starter;
 
 import io.grpc.BindableService;
@@ -56,3 +57,4 @@ public class GrpcServerRunner implements CommandLineRunner, DisposableBean {
         server.shutdown();
     }
 }
+*/

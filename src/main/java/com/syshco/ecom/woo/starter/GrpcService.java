@@ -1,3 +1,4 @@
+/*
 package com.syshco.ecom.woo.starter;
 
 import io.grpc.BindableService;
@@ -11,3 +12,4 @@ import java.lang.annotation.*;
 public @interface GrpcService {
     Class<? extends BindableService>[] value() default {};
 }
+*/

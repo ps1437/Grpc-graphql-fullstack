@@ -17,6 +17,7 @@ message Product {
   string imageUrl = 7;
   int32 stockQuantity = 8;
   bool isAvailable = 9;
+
   google.protobuf.Timestamp createdAt = 10;
   google.protobuf.Timestamp updatedAt = 11;
 }
@@ -31,7 +32,7 @@ message ProductId {
 }
 
 service ProductService {
-  rpc getAllProducts(google.protobuf.Empty) returns (ProductList);
+  rpc getProducts(google.protobuf.Empty) returns (ProductList);
   rpc addProducts(ProductList) returns (google.protobuf.Empty);
   rpc getByProductId(ProductId) returns (Product);
 }

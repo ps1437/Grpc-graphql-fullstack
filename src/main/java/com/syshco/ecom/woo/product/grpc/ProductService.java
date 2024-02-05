@@ -2,16 +2,16 @@ package com.syshco.ecom.woo.product.grpc;
 
 
 import com.google.protobuf.Empty;
+import com.syshco.ecom.woo.gen.Product;
 import com.syshco.ecom.woo.gen.ProductId;
 import com.syshco.ecom.woo.gen.ProductList;
 import com.syshco.ecom.woo.gen.ProductServiceGrpc;
+import com.syshco.ecom.woo.product.ProductEntity;
 import com.syshco.ecom.woo.product.ProductMapper;
 import com.syshco.ecom.woo.product.ProductRepository;
-import com.syshco.ecom.woo.starter.GrpcService;
-import com.syshco.ecom.woo.gen.Product;
-import com.syshco.ecom.woo.product.ProductEntity;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase {
     private final ProductMapper productMapper;
 
     @Override
-    public void getAllProducts(Empty request, StreamObserver<ProductList> responseObserver) {
+    public void getProducts(Empty request, StreamObserver<ProductList> responseObserver) {
         List<Product> products = fetchProducts();
         ProductList productList = toProductList(products);
         responseObserver.onNext(productList);

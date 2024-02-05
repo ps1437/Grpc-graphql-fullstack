@@ -1,6 +1,7 @@
 package com.syshco.ecom.woo.product;
 
 import com.syshco.ecom.woo.gen.Product;
+import com.syshco.ecom.woo.gen.ProductList;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -18,6 +19,10 @@ public interface ProductMapper {
     @Mapping(target = "createdAt", expression = "java( mapTimestamp(productEntity.getCreatedAt()) )")
     @Mapping(target = "updatedAt", expression = "java( mapTimestamp(productEntity.getUpdatedAt()) )")
     Product toProduct(ProductEntity productEntity);
+
+    @Mapping(target = "unknownFields", ignore = true)
+    @Mapping(target = "allFields", ignore = true)
+    Product toProduct(Product Product);
 
     @InheritInverseConfiguration
     @Mapping(target = "createdAt", expression = "java( mapProtobufTimestampToSqlTimestamp(product.getCreatedAt()) )")
@@ -45,4 +50,7 @@ public interface ProductMapper {
         return null;
     }
 
+    @Mapping(target = "createdAt", expression = "java( mapProtobufTimestampToSqlTimestamp(product.getCreatedAt()) )")
+    @Mapping(target = "updatedAt", expression = "java( mapProtobufTimestampToSqlTimestamp(product.getUpdatedAt()) )")
+    ProductDTO toProductDTO(Product product);
 }
